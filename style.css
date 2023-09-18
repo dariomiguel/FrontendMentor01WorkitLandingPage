@@ -1,5 +1,116 @@
+/****************************
+*   Configuración General   *
+****************************/
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+
+:root {
+    --Dark-Purple: #24053E;
+    --Eucaplyptus: #44FFA1;
+    --Davys-Grey: #584D62;
+    --Ghost-White: #FCF8FF;
+    --White: #FFF;
+}
+
+@font-face {
+    font-family: "Fraunces144";
+    src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal; 
+}
+
+@font-face {
+    font-family: "Manrope";
+    src: url(./assets/fonts/manrope/Manrope-VariableFont_wght.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal; 
+}
+
+/****************************
+*          Header           *
+****************************/
+
+header{
+    height: 730px;
+    position: relative;
+    text-align: center;
+    fill: var(--Dark-Purple);
+}
+
+svg{
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.logo{
+    flex-shrink: 0;
+    position: absolute;
+    z-index: 2;
+    top: 57px;
+    left: 165px;
+}
+
+.btnSecundario{
+    color: var(--White, #FFF);
+    background-color: rgba(255, 0, 0, 0);
+    font-family: Manrope;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+    letter-spacing: -0.18px;
+    border: none;
+    border-bottom: #44FFA1 1px solid;
+    
+}
+
+header .btnSecundario{
+    position: absolute;
+    z-index: 2;
+    top: 57px;
+    right: 165px;
+}
+
+.tittle{
+    color: var(--White, #FFF);
+    font-family: 'Fraunces144', sans-serif;
+    font-size: 80px;
+    line-height: 80px;
+    font-feature-settings: 'clig' off, 'liga' off;
+
+    position: absolute;
+    z-index: 2;
+    top: 146px;
+    right: 50%;
+    transform: translate(50%, 0);
+}
+
+.subrayado{
+    text-decoration: underline var(--Eucaplyptus);
+}
+
+.btnPrimario{
+    background-color: var(--Eucaplyptus);
+    border: none;
+    font-family: Manrope;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -0.18000000715255737px;
+    text-align: center;
+    padding: 13px 32px;
+}
+
+header .btnPrimario{
+    position: absolute;
+    z-index: 2;
+    top: 343px;
+    right: 50%;
+    transform: translate(50%, 0);
 }
