@@ -18,7 +18,7 @@
 
 @font-face {
     font-family: "Fraunces144";
-    src: url(./assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf) format('truetype');
+    src: url(./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format('truetype');
     font-weight: 600;
     font-style: normal; 
 }
@@ -29,9 +29,10 @@
     font-weight: 600;
     font-style: normal; 
 }
-
+/***************************/
 /****************************
 *          Header           *
+*****************************
 ****************************/
 
 header{
@@ -113,4 +114,30 @@ header .btnPrimario{
     top: 343px;
     right: 50%;
     transform: translate(50%, 0);
+}
+
+/****************************
+*    Elementos Decorativos  *
+****************************/
+
+.ovaloDecorativo1{
+    position: absolute;
+    z-index: 2;
+    top: 116px;
+    left: -139px;
+}
+.ovaloDecorativo2{
+    position: absolute;
+    z-index: 2;
+    top: 314px;
+    right: -48px;
+}
+.movilDevorativo{
+    width: 715px;
+    height: 427px;
+    position: absolute;
+    z-index: 2;
+    top: 454px;
+    right: 50%;
+    transform: translate(51%, 0);
 }
