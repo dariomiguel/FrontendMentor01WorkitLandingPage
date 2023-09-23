@@ -14,12 +14,15 @@
     --Davys-Grey: #584D62;
     --Ghost-White: #FCF8FF;
     --White: #FFF;
+    /* --Desktop: 1440px;
+    --Tablet: 768px;
+    --Mobile: 375px; */
 }
 
 @font-face {
     font-family: "Fraunces144";
     src: url(./assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf) format('truetype');
-    font-weight: 600;
+    font-weight: 0 1000;
     font-style: normal; 
 }
 
@@ -29,6 +32,11 @@
     font-weight: 600;
     font-style: normal; 
 }
+
+body{
+    height: 2494px;
+}
+
 /***************************/
 /****************************
 *          Header           *
@@ -36,13 +44,30 @@
 ****************************/
 
 header{
-    height: 730px;
+    height: 96px;
     position: relative;
-    text-align: center;
-    fill: var(--Dark-Purple);
+    background-color: var(--Dark-Purple);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
 }
 
-svg{
+@media (min-width: 768px) {
+    header {
+    padding: 0 39px; 
+    }
+}
+
+@media (min-width: 1440px) {
+    header {
+    height: 144px;
+    padding: 0 165px; 
+    }
+}
+
+/* svg{
     width: 100%;
     height: auto;
     position: relative;
@@ -64,14 +89,14 @@ svg{
     font-size: 18px;
     font-style: normal;
     font-weight: 700;
-    line-height: 32px; /* 177.778% */
+    line-height: 32px; 
     letter-spacing: -0.18px;
     border: none;
     border-bottom: #44FFA1 1px solid;
     
 }
 
-header .btnSecundario{
+/* header .btnSecundario{
     position: absolute;
     z-index: 2;
     top: 57px;
@@ -90,9 +115,9 @@ header .btnSecundario{
     top: 146px;
     right: 50%;
     transform: translate(50%, 0);
-}
+} */
 
-.subrayado{
+/* .subrayado{
     text-decoration: underline var(--Eucaplyptus);
 }
 
@@ -114,13 +139,13 @@ header .btnPrimario{
     top: 343px;
     right: 50%;
     transform: translate(50%, 0);
-}
+}  */
 
 /****************************
 *    Elementos Decorativos  *
 ****************************/
 
-.ovaloDecorativo1{
+/* .ovaloDecorativo1{
     position: absolute;
     z-index: 2;
     top: 116px;
@@ -140,4 +165,24 @@ header .btnPrimario{
     top: 454px;
     right: 50%;
     transform: translate(51%, 0);
+} */
+
+/***************************/
+/****************************
+*           Main            *
+*****************************
+****************************/
+
+/* main{
+    top: -226px;
+    height: 730px;
+    position: relative;
+    text-align: center;
+    fill: var(--Ghost-White);
+    overflow: hidden;
+    z-index: 0;
 }
+
+.contenedorTarjetas{
+    display: flex;
+} */
