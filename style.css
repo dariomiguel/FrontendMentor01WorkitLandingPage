@@ -14,9 +14,6 @@
     --Davys-Grey: #584D62;
     --Ghost-White: #FCF8FF;
     --White: #FFF;
-    /* --Desktop: 1440px;
-    --Tablet: 768px;
-    --Mobile: 375px; */
 }
 
 @font-face {
@@ -65,6 +62,52 @@ header{
     height: 144px;
     padding: 0 165px; 
     }
+}
+
+/***************************/
+/****************************
+*           Main            *
+*****************************
+****************************/
+
+/***************************/
+/****************************
+*          Footer           *
+*****************************
+****************************/
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 64px 0;
+}
+
+@media (min-width: 768px) {
+    footer {
+        padding: 122px 0;
+    }
+}
+
+@media (min-width: 1440px) {
+    footer {
+        padding: 110px 0; 
+    }
+}
+
+.footerContenedor{
+    height: 102.224px;
+    width: 116px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.redesContenedor{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 /* svg{
@@ -167,11 +210,7 @@ header .btnPrimario{
     transform: translate(51%, 0);
 } */
 
-/***************************/
-/****************************
-*           Main            *
-*****************************
-****************************/
+
 
 /* main{
     top: -226px;
