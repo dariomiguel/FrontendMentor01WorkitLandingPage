@@ -98,6 +98,7 @@
     letter-spacing: -0.18px;
     text-align: center;
     padding: 13px 25px;
+    cursor: pointer;
 }
 
 .btnPrimario:hover{
@@ -117,12 +118,11 @@
     letter-spacing: -0.18px;
     border: none;
     border-bottom: #44FFA1 1px solid;
-    
+    cursor: pointer;
 }
 
 .btnSecundario:hover{
-    color: var(--Eucaplyptus)
-    
+    color: var(--Eucaplyptus);
 }
 
 /***************************/
@@ -159,10 +159,17 @@ header{
 *           Main            *
 *****************************
 ****************************/
-
+main{
+    height: 5000px;
+}
 /****************************
 *       Presentación        *
 ****************************/
+.contenedorPresentacion{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
 
 .contenidoPresentacion{
     height: 360px;
@@ -196,31 +203,83 @@ header{
 ****************************/
 
 .contenedorCaracteristicas{
-    background-color: var(--Ghost-White);
     height: 1071px;
     width: 100%;
-    /* z-index: -1; */
-    /* position: absolute; */
-    top: 392px;
+    
+    position: absolute;
+    top: 392px; 
+    z-index: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenedorTarjetas{
+    background-color: var(--Ghost-White);
+    /* background-color: green; */
+    flex-grow: 1;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 16px;
+    padding-bottom: 5px ;
+
+}
+
+.tarjeta{
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;   
+    padding-bottom: 40px;
+}
+
+.nroItem{
+    width: 48px;
+    height: 46px;
+    flex-shrink: 0;
+    margin-bottom: 24px;
+
+    border: solid var(--Davys-Grey) 1px;
+    border-radius: 30.5px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font: 600  20px "Fraunces144" ;
+    color: var(--Dark-Purple);
+}
+
+.tituloTarjeta{
+
+    color: var(--Dark-Purple, #24053E);
+    text-align: center;
+    font-family: Fraunces 144pt;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.contenedorFondoCarac{
+    width: 100%;
+    bottom: 0;
+    z-index: 10;
 }
 
 /****************************
 *    Elementos Decorativos  *
 ****************************/
 
-/* .ovaloDecorativo1{
-    position: absolute;
-    z-index: 2;
-    top: 116px;
-    left: -139px;
-}
-.ovaloDecorativo2{
-    position: absolute;
-    z-index: 2;
-    top: 314px;
-    right: -48px;
-}
-*/
 .movilDevorativo{
     width: 715px;
     height: 427px;
@@ -230,20 +289,6 @@ header{
     right: 50%;
     transform: translate(51%, 0);
 } 
-
-/* main{
-    top: -226px;
-    height: 730px;
-    position: relative;
-    text-align: center;
-    fill: var(--Ghost-White);
-    overflow: hidden;
-    z-index: 0;
-}
-
-.contenedorTarjetas{
-    display: flex;
-} */
 
 /***************************/
 /****************************
