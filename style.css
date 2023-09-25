@@ -38,11 +38,13 @@
     font-style: normal;
     font-weight: 600;
     font-feature-settings:"clig" off, "liga" off;
+    text-align: center;
 }
 
 .headingS{
-    font-size: 32px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 50px;
+    width: 343px;
 }
 
 .bodyFont{
@@ -60,6 +62,8 @@
     .headingM{
         font-size: 56px;
         line-height: 64px;
+        width: 573px;
+        padding: 0 40px;
     }
     
 }
@@ -68,6 +72,8 @@
     .headingL{
         font-size: 80px;
         line-height: 80px;
+        width: 635px;
+        padding: 0 40px;
     }
 
     .bodyFont{
@@ -158,24 +164,29 @@ header{
 *       Presentación        *
 ****************************/
 
-/* .contenedorPresentacion{
-    position: absolute;
-    z-index: 10;
-} */
-
 .contenidoPresentacion{
     height: 360px;
     background-color: var(--Dark-Purple);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 34px 15px 0 15px;
 }
+
 
 @media (min-width: 768px) {
     .contenidoPresentacion {
         height: 391px;
+        padding-top: 26px;
+        gap: 50px;
     }
 }
 
 @media (min-width: 1440px) {
     .contenidoPresentacion {
+        padding-top: 50px;
         height: 616px;
     }
 }
