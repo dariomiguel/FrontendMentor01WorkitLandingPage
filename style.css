@@ -205,21 +205,17 @@ main{
 .contenedorCaracteristicas{
     height: 1071px;
     width: 100%;
-    
     position: absolute;
     top: 392px; 
     z-index: 0;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .contenedorTarjetas{
     background-color: var(--Ghost-White);
-    /* background-color: green; */
     flex-grow: 1;
     width: 100%;
 
@@ -232,13 +228,30 @@ main{
 
 }
 
-.tarjeta{
-    width: 343px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;   
+.tarjeta {
+    display: grid;
+    grid-template-columns: 343px; 
+    justify-items: center; 
+    text-align: center;
     padding-bottom: 40px;
+    grid-template-areas: 
+    "nro"
+    "texto";
+}
+
+.detalleTarjeta{
+    grid-area: texto;
+}
+
+.tituloTarjeta{
+    color: var(--Dark-Purple, #24053E);
+    text-align: center;
+    font-family: "Fraunces144";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 36px;
+    margin-bottom: 16px;
 }
 
 .nroItem{
@@ -253,22 +266,74 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+    grid-area: nro;
 
     font: 600  20px "Fraunces144" ;
     color: var(--Dark-Purple);
 }
 
-.tituloTarjeta{
 
-    color: var(--Dark-Purple, #24053E);
-    text-align: center;
-    font-family: Fraunces 144pt;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 36px;
-    margin-bottom: 16px;
+@media (min-width: 768px) {
+    .contenedorTarjetas{
+        padding-bottom: 6px;
+        
+    }
+    .contenedorTarjetas .tarjeta:first-child {
+        margin-bottom: 36px;
+    }
+
+    .tarjeta  {
+        grid-template-columns: auto 493px; 
+        align-items: end;
+        text-align: left;
+        column-gap: 32px;
+        margin-bottom: 48px;
+        padding: 0px;
+        grid-template-areas: 
+        "nro texto";
+    }
 }
+
+@media (min-width: 1440px) {
+    .contenedorCaracteristicas{
+        top: 504px; 
+    }
+
+    .contenedorTarjetas .tarjeta:first-child {
+        margin-bottom: 0px;
+    }
+
+    .contenedorTarjetas {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 72px;
+    column-gap: 26px;
+    }
+
+    .tarjeta {
+        margin-bottom: 0px;
+        grid-template-columns: 354px;
+        grid-template-areas: 
+        "nro"
+        "texto";
+    }
+
+    .nroItem{
+        margin-bottom: 56px;
+    }
+
+    .tituloTarjeta{
+        margin-bottom: 28px;
+    }
+
+    .detalleTarjeta{
+        text-align: center;
+    }
+    
+
+}
+
 
 .contenedorFondoCarac{
     width: 100%;
