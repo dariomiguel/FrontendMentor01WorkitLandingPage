@@ -177,6 +177,7 @@ main.container{
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 
     position: relative;
     z-index: 3;
@@ -232,16 +233,55 @@ main.container{
     z-index: 2;
 } 
 
+.contenedorDecoraciones{
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    top:0px;
+    
+    overflow: hidden;
+    z-index: 5;
+}
+
+.ovaloDecorativoIzq, .ovaloDecorativoDer{
+    position: absolute;
+    display: none;
+    z-index: 6;
+
+}
+
 @media (min-width: 768px) {
     .movilDevorativo{
         width: 514px;
     } 
+    .ovaloDecorativoIzq, .ovaloDecorativoDer{
+        display: block;
+    }
+    .ovaloDecorativoIzq{
+        top: 71px;
+        left: -228px;
+    }
+    .ovaloDecorativoDer{
+        top: 250px;
+        right: -94px;
+    }
 }
 
 @media (min-width: 1440px) {
     .movilDevorativo{
         width: 764px;
     } 
+
+    .ovaloDecorativoIzq{
+        top: 116px;
+        left: -174px
+    }
+    .ovaloDecorativoDer{
+        top: 314px;
+        right: -48px;
+    }
+
 } 
 
 /****************************
