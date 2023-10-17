@@ -343,20 +343,6 @@ main.container{
 }
 
 
-/****************************
-*    Elementos Decorativos  *
-****************************/
-
-.movilDevorativo{
-    width: 715px;
-    height: 427px;
-    position: absolute;
-    z-index: 2;
-    top: 454px;
-    right: 50%;
-    transform: translate(51%, 0);
-} 
-
 /***************************/
 /****************************
 *          Footer           *
