@@ -335,14 +335,8 @@ main.container{
 }
 
 .textoTarjetas{
-    width: 343px;
-    color: var(--Davys-Grey, #584D62);
-    font-family: Manrope;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 28px;
-    text-align: center;
+    display: flex ;
+    flex-direction: column;
 }
 
 .tituloTarjeta{
@@ -360,6 +354,59 @@ main.container{
     text-align: center;
 }
 
+@media (min-width: 768px) {
+    .contenedorTarjetas{
+        margin-top: 70px;
+
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: auto 498px;
+        justify-items: center;
+        align-items: center;
+        column-gap: 50px;
+        row-gap: 34px;
+        grid-template-areas:
+            "item1 texto1" 
+            "item2 texto2" 
+            "item3 texto3" 
+    }
+
+    .textoTarjetas{
+        align-items: flex-start;
+    }
+
+    .detalleTarjeta{
+        text-align: left;
+    }
+}
+
+@media (min-width: 1440px) {
+    .contenedorTarjetas{
+        margin-top: 80px;
+
+        grid-template-rows: auto 1fr;
+        grid-template-columns: repeat(3, 354px);
+        justify-items: center;
+        align-items: center;
+        column-gap: 26px;
+        row-gap: 50px;
+        grid-template-areas:
+            "item1 item2 item3" 
+            "texto1 texto2 texto3";
+    }
+
+    .tituloTarjeta{
+        margin-bottom: 28px;
+    }
+
+    .textoTarjetas{
+        align-items: center;
+    }
+
+    .detalleTarjeta{
+        text-align: center;
+        height: 128px;
+    }
+}
 
 /****************************
 *          Fondos           *
