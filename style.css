@@ -6,6 +6,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    /* border: solid red 3px; */
 }
 
 :root {
@@ -90,14 +91,17 @@
 
 .btnPrimario{
     background-color: var(--Eucaplyptus);
+    display: block;
+    height: 55px;
     border: none;
     font-family: "Manrope";
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 32px;
     letter-spacing: -0.18px;
     text-align: center;
-    padding: 13px 25px;
+
+    padding: 0 24px;
     cursor: pointer;
 }
 
@@ -125,15 +129,25 @@
     color: var(--Eucaplyptus);
 }
 
+
 /***************************/
 /****************************
-*          Header           *
+*           Body            *
 *****************************
 ****************************/
 
+/****************************
+*          Header           *
+****************************/
+
 header{
-    height: 96px;
     background-color: var(--Dark-Purple);
+    width: 100%;
+    height: 96px;
+    z-index: 2;
+
+    position: relative;
+    top: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -149,15 +163,13 @@ header{
 
 @media (min-width: 1440px) {
     header {
-        height: 144px;
+        height: 146px;
         padding: 0 165px; 
     }
 }
 
-/***************************/
 /****************************
 *           Main            *
-*****************************
 ****************************/
 main.container{
     display: flex;
@@ -172,27 +184,24 @@ main.container{
 /****************************
 *       Presentación        *
 ****************************/
-.contenedorPresentacion{
-    position: absolute;
-    width: 100%;
-    z-index: 1;
-}
 
-.contenidoPresentacion{
-    height: 360px;
-    background-color: var(--Dark-Purple);
-    
+.contenedorPresentacion{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 40px;
-    padding: 34px 15px 0 15px;
+    justify-content: center;
+    padding-top: 34px;
+    width: 100%;
+    z-index: 5;
 }
 
+.contenedorPresentacion .btnPrimario{
+    margin: 40px auto 64px;
+}
 
 @media (min-width: 768px) {
-    .contenidoPresentacion {
-        height: 391px;
+    .contenedorPresentacion {
+        justify-content: flex-start;
         padding-top: 26px;
     }
 
@@ -256,11 +265,20 @@ main.container{
 }
 
 @media (min-width: 1440px) {
-    .contenidoPresentacion {
-        padding-top: 50px;
-        height: 616px;
+    .movilDevorativo{
+        width: 764px;
+    } 
+
+    .ovaloDecorativoIzq{
+        top: 116px;
+        left: -174px
     }
-}
+    .ovaloDecorativoDer{
+        top: 314px;
+        right: -48px;
+    }
+
+} 
 
 /****************************
 *     Características       *
@@ -343,12 +361,83 @@ main.container{
 }
 
 
+/****************************
+*          Fondos           *
+****************************/
+
+.bgContainer{
+    width: 100%;
+    height: 1463px;
+    display: block;
+    
+    position: absolute;
+    top: 0px;
+    bottom: 943px;
+    z-index: 0;
+}
+
+.fondoPresentacion{
+    position: relative;
+    z-index: 2;
+}
+
+.fondoColorPresentacion{
+    width: 100%;
+    height: calc(481.707px - 26px);
+    background-color: var(--Dark-Purple, #24053E);
+    
+    position: relative;
+}
+
+.fondoCaracteristicas{
+    position: relative;
+    z-index: 1;
+    top: -6.1518%;
+}
+
+.fondoColorCaracteristicas{
+    width: 100%;
+    height: calc(1071px - 26px);
+    background-color: var(--Ghost-White);
+
+    position: absolute;
+    z-index: 1;
+}
+
+.fondoCaracteristicas svg, .fondoPresentacion svg{
+    display: block;
+}
+
+@media (min-width: 768px) {
+    .bgContainer{
+        height: 1324px;
+    }
+    .fondoColorPresentacion{
+        height: calc(540px - 53px);
+    }
+    .fondoCaracteristicas{
+        top: -10.35%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .bgContainer{
+        height: 1464px;
+    }
+    .fondoColorPresentacion{
+        height: calc(730px - 100px);
+    }
+    .fondoCaracteristicas{
+        top: -15.44%;
+    }
+}
+
 /***************************/
 /****************************
 *          Footer           *
 *****************************
 ****************************/
-
+/* 
 footer{
     display: flex;
     flex-wrap: wrap;
@@ -381,4 +470,5 @@ footer{
     width: 100%;
     display: flex;
     justify-content: space-between;
-}
+} 
+*/
